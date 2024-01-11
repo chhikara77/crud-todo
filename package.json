@@ -1,0 +1,23 @@
+{
+  "name": "todoapp",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "a todo app with crud operation and passwordless authentication",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "firebase": "^10.7.1",
+    "firebase-admin": "^12.0.0",
+    "jsonwebtoken": "^8.5.1",
+    "pg-promise": "^10.3.2"
+  },
+  "author": "sanjay chhikara",
+  "license": "ISC"
+}
