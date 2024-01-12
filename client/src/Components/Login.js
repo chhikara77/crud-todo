@@ -35,7 +35,7 @@ export const Login = () => {
         // now in case user clicks the email link on a different device, we will ask for email confirmation
         let email = localStorage.getItem('email');
         // after that we will complete the login process
-        axios.post('http://localhost:3000/user/verify',{email,oobCode:window.location.href})
+        axios.post('http://localhost:4000/user/verify',{email,oobCode:window.location.href})
         .then((res)=>{
           // we can get the user from result.user but no need in this case
           console.log(res);
@@ -56,7 +56,7 @@ export const Login = () => {
   const handleLogin=(e)=>{
     e.preventDefault();
     setLoginLoading(true);
-    axios.post('http://localhost:3000/user/login',{email}
+    axios.post('http://localhost:4000/user/login',{email}
     ).then((res)=>{
       console.log("login res",res)
       localStorage.setItem('email', email);

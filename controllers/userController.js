@@ -1,13 +1,7 @@
 // controllers/userController.js
-import { initializeApp } from 'firebase/app';
-import { getAuth } from 'firebase/auth';
 import { sendSignInLinkToEmail, signInWithEmailLink } from 'firebase/auth';
-import firebaseConfig from '../config/firebaseConfig.js';
-// Initialize Firebase with your configuration
+import { auth } from '../config/firebaseConfig.js';
 
-
-const app = initializeApp(firebaseConfig);
-const auth = getAuth(app);
 
 class UserController {
   static async sendLoginLink(req,res) {
